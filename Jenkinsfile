@@ -1,7 +1,7 @@
 pipeline {
   agent { 
     docker { 
-      image 'node:alpine',
+      image 'node:alpine'
       args '-p 3000:3000'
     } 
   }
@@ -10,10 +10,6 @@ pipeline {
       steps {
         sh 'npm --version'
         sh 'echo "Hello World"'
-        sh '''
-            echo "Multiline shell steps works too"
-            ls -lah
-        '''
       }
     }
     state('build') {
