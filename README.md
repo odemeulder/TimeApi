@@ -20,6 +20,11 @@ To view the logs of the Jenkins container
 docker logs [container id]
 ```
 
+To build the image
+```bash
+docker image build -t odemeulder/timeapi .
+```
+
 Workaround permissions issue, log into the docker container (as root) and change the permissions of the jenkins user.
 ```bash
 docker exec -it -u root [container id] /bin/bash
